@@ -9,19 +9,22 @@ export const metadata = {
 };
 type RootLayoutProps = {
   children: ReactNode;
+  session?: any;
 };
-const RootLayout = ({ children }: RootLayoutProps) => {
+const RootLayout = ({ children, session }: RootLayoutProps) => {
   return (
     <html lang="en">
       <body>
-        <div className="main">
-          <div className="gradient"></div>
-        </div>
-        <main className="app">
-          {" "}
-          <Nav />
-          {children}
-        </main>
+        <Provider session={session}>
+          <div className="main">
+            <div className="gradient"></div>
+          </div>
+          <main className="app">
+            {" "}
+            <Nav />
+            {children}
+          </main>
+        </Provider>
       </body>
     </html>
   );
