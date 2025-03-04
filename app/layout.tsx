@@ -13,7 +13,7 @@ type RootLayoutProps = {
 };
 const RootLayout = ({ children, session }: RootLayoutProps) => {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <Provider session={session}>
           <div className="main">
