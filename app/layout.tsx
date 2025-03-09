@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import "@styles/globals.css";
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
