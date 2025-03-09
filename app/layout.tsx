@@ -7,21 +7,8 @@ export const metadata = {
   title: "IdeaCraft",
   description: "Discover and share AI prompts",
 };
-type User = {
-  name: string;
-  email: string;
-};
 
-type Session = {
-  user: User;
-  expires: string;
-};
-
-type RootLayoutProps = {
-  children: ReactNode;
-  session?: Session;
-};
-const RootLayout = ({ children, session }: RootLayoutProps) => {
+const RootLayout = ({ children, session }) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
