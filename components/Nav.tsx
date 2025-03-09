@@ -4,10 +4,17 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
+interface Provider {
+  id: string;
+  name: string;
+  type: string;
+}
 const Nav = () => {
   const { data: session } = useSession();
   const isUserLoggedIn = session ? true : false;
-  const [providers, setProviders] = useState(null);
+  const [providers, setProviders] = useState<Record<string, Provider> | null>(
+    null
+  );
   const [toggleDropDown, setToggleDropDown] = useState(false);
 
   useEffect(() => {
@@ -28,7 +35,7 @@ const Nav = () => {
           height={30}
           className="object-contained"
         />
-        <p className="logo_text"> IdeaCraft</p>
+        <p className="logo_text"> AI Prompts Craft</p>
       </Link>
       {/* Desktop navigation */}
       <div className="sm:flex hidden">
@@ -59,11 +66,11 @@ const Nav = () => {
             {providers &&
               Object.values(providers).map((provider) => (
                 <button
-                  key={provider.name}
+                  key={provider?.name}
                   onClick={() => signIn(provider.id)}
                   className="black_btn"
                 >
-                  Sign in with {provider.name}
+                  Sign in with {provider?.name}
                 </button>
               ))}
           </>
@@ -121,7 +128,7 @@ const Nav = () => {
                   onClick={() => signIn(provider.id)}
                   className="black_btn"
                 >
-                  Sign in with {provider.name}
+                  Sign in with {provider?.name}
                 </button>
               ))}
           </>

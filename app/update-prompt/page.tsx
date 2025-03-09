@@ -47,7 +47,7 @@ const UpdatePrompt = () => {
     } catch (error) {
       console.log(error);
     } finally {
-      setIsSubmitting(false);
+      setSubmitting(false);
     }
   };
   return (

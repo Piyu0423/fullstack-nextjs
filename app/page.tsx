@@ -11,7 +11,7 @@ const Home = () => {
         <span className="orange_gradient text-center">AI powered prompts</span>
       </h1>
       <p className="desc text-center">
-        IdeaCraft is an open-source AI prompting tool for modern world to
+        AI Prompts Craft is an open-source AI prompting tool for modern world to
         discover, create and share creative prompts.
       </p>
       <Feed />

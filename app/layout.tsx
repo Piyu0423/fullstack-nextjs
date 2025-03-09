@@ -4,19 +4,20 @@ import Nav from "@components/Nav";
 import Provider from "@components/Provider";
 
 export const metadata = {
-  title: "IdeaCraft",
+  title: "AI Prompts Craft",
   description: "Discover and share AI prompts",
 };
 
 type RootLayoutProps = {
   children: ReactNode;
+  session: any;
 };
 
-const RootLayout = ({ children }: RootLayoutProps) => {
+const RootLayout = ({ children, session }: RootLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Provider>
+        <Provider session={session}>
           <div className="main">
             <div className="gradient"></div>
           </div>
