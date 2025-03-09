@@ -1,5 +1,4 @@
 "use client";
-import React, { use } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -58,7 +57,7 @@ const Nav = () => {
         ) : (
           <>
             {providers &&
-              Object.values(providers).map((provider: any) => (
+              Object.values(providers).map((provider) => (
                 <button
                   key={provider.name}
                   onClick={() => signIn(provider.id)}
@@ -116,7 +115,7 @@ const Nav = () => {
         ) : (
           <>
             {providers &&
-              Object.values(providers).map((provider: any) => (
+              Object.values(providers).map((provider) => (
                 <button
                   key={provider.name}
                   onClick={() => signIn(provider.id)}

@@ -1,4 +1,4 @@
-import React, { Children, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import "@styles/globals.css";
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
@@ -7,9 +7,19 @@ export const metadata = {
   title: "IdeaCraft",
   description: "Discover and share AI prompts",
 };
+type User = {
+  name: string;
+  email: string;
+};
+
+type Session = {
+  user: User;
+  expires: string;
+};
+
 type RootLayoutProps = {
   children: ReactNode;
-  session?: any;
+  session?: Session;
 };
 const RootLayout = ({ children, session }: RootLayoutProps) => {
   return (
