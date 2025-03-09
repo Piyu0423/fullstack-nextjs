@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import "@styles/globals.css";
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
@@ -8,16 +8,19 @@ export const metadata = {
   description: "Discover and share AI prompts",
 };
 
-const RootLayout = ({ children, session }) => {
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Provider session={session}>
+        <Provider>
           <div className="main">
             <div className="gradient"></div>
           </div>
           <main className="app">
-            {" "}
             <Nav />
             {children}
           </main>
