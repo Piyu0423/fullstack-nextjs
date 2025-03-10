@@ -12,7 +12,7 @@ CRUD (Create, Read, Update, Delete) functionality to interact with the database.
 Fully responsive UI design that adjusts seamlessly across different screen sizes.
 
 ## Deploy on Vercel
-https://ai-prompt-craft-8kk76rsdi-piyu0423s-projects.vercel.app/
+https://ai-prompt-craft-git-master-piyu0423s-projects.vercel.app/
 ## Getting Started
 
 First, run the development server:
